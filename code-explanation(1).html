@@ -3,6 +3,19 @@
 
 <button onclick="logout()">Logout</button><br>
 
+<a href="code-home.html">Home</a>
+<a href="code-explanation(1).html">설명란</a>
+<a href="code-example(2).html">예시</a>
+<a href="code-index(login).html">로그인</a>
+
+<h1>설명</h1>
+
+<xmp>
+<!doctype html>
+<html>
+
+<button onclick="logout()">Logout</button><br>
+
 <title>WEB - HTML</title>
 <meta charset="utf-8">
 
@@ -47,6 +60,16 @@
         <strong>a 미리보기</strong> : title="설명"<br>
     </p>
 </head>
+
+<script>
+    function logout() {
+        document.cookie = "sessionID=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        window.location.href = "index.html";
+    }
+</script>
+
+<html>
+</xmp>
 
 <script>
     function logout() {

@@ -3,6 +3,19 @@
 
 <button onclick="logout()">Logout</button><br>
 
+<a href="code-home.html">Home</a>
+<a href="code-explanation(1).html">설명란</a>
+<a href="code-example(2).html">예시</a>
+<a href="code-index(login).html">로그인</a>
+
+<h1>예시</h1>
+
+<xmp>
+<!doctype html>
+<html>
+
+<button onclick="logout()">Logout</button><br>
+
 <style>
     body{
     background-image : url("background2.jpg");
@@ -46,6 +59,16 @@
     <input type="checkbox">
 </body>
 
+
+<script>
+    function logout() {
+        document.cookie = "sessionID=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        window.location.href = "index.html";
+    }
+</script>
+
+</html>
+</xmp>
 
 <script>
     function logout() {
