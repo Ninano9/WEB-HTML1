@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<button onclick="logout()">Logout</button><br>
+
+<a href="code-home.html">Home</a>
+<a href="code-explanation(1).html">설명란</a>
+<a href="code-example(2).html">예시</a>
+<a href="code-index(login).html">로그인</a>
+
+<h1>설명</h1>
+
+<button onclick="logout()">Logout</button><br>
+
+<title>WEB - HTML</title>
+<meta charset="utf-8">
+
+<style>
+    body{
+    background-image : url("background2.jpg");
+       }
+</style>
+
+<h1><a href="Home.html">WEB</a></h1>
+    <ol>
+        <li><h2><a href="1.html">설명란</a></h2></li>
+        <li><h2><a href="2.html">예시</a></h2></li>
+        
+    </ol>
+    
+<br>
+
+<head>
+    <P>
+        <strong>br</strong> : 띄어쓰기 마지막에 '/' 필요없음<br>
+        <strong>p</strong> : 단락 나눔<br>
+        <strong>strong</strong> : 굵은 글씨<br>
+        <strong>u</strong> : 밑줄<br>
+        <strong>img src(image source)</strong> : img scr="이름.jpg"이미지 삽입, 100%(화면크기에 맞춤)<br>
+        <strong>img scr="하위폴더/이름.jpg"</strong> : 이미지가 하위폴에 있을 경우<br>
+        <strong>h1~h6</strong> : 주로 제목, 큰글씨+한줄띄우기, 숫자가 작을수록 글씨 커짐<br>
+        <strong>li</strong> : list 목록 만들기<br>
+        <strong>ul</strong> : Unordered list li의 부모로 연관 항목 묶기<br>
+        <strong>ol</strong> : Ordered list li 목록에서 순서 숫자 자동 생성<br>
+        <strong>title</strong> : 제목 생성<br>
+        <strong>meta charset="utf-8"</strong> : 브라우저가 파일을 읽을 때 ""안에 있는 형식으로 읽을 수 있게 하는 명령어<br>
+        <strong>html</strong> : head와 body를 묶는 최상단 명령어<br>
+        <strong>!doctype html</strong> : 관용적 표현, 파일이 html이라는 뜻<br>
+        <strong>style background-image</strong> : 배경 이미지 삽입<br>
+        <strong>background-repeat : no repeat;</strong> : 사진 반복 없음<br>
+        <strong>!-- --</strong> : 주석<br>
+        <strong>xmp</strong> : 코드 내용 그대로 보여주기<br>
+        <br>
+        <strong>a href</strong> : anchor hypertext reference, 링크를 걸고 싶을 때 사용<br>
+        <strong>a 새링크 열기</strong> : target="_blank"("_"중요)<br>
+        <strong>a 미리보기</strong> : title="설명"<br>
+    </p>
+</head>
+
+<script>
+    function logout() {
+        document.cookie = "sessionID=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        window.location.href = "index.html";
+    }
+</script>
+
+<script>
+    function logout() {
+        document.cookie = "sessionID=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        window.location.href = "index.html";
+    }
+</script>
+
+</html>

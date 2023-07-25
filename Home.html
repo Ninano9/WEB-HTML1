@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<title>WEB - HTML</title>
+<meta charset="utf-8">
+
+<button onclick="logout()">Logout</button><br>
+
+<style>
+    body{
+    background-image : url("background2.jpg");
+    }
+</style>
+
+<h1><a href="Home.html">WEB</a></h1>
+    <ol>
+        <li><h2><a href="1.html">설명란</a></h2></li>
+        <li><h2><a href="2.html">예시</a></h2></li>
+        
+    </ol>
+    
+<br>
+
+
+Hello World.<br><br>
+<img src="coding1.jpg" width="50%"><br><br>
+<a href="https://www.w3.org/TR/2011/WD-html5-20110405/"target="_blank" title="html specification">HTML에 관하여</a><br>
+
+
+<script>
+    function logout() {
+        document.cookie = "sessionID=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        window.location.href = "index.html";
+    }
+</script>
+
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<button onclick="logout()">Logout</button><br>
+
+<a href="code-home.html">Home</a>
+<a href="code-explanation(1).html">설명란</a>
+<a href="code-example(2).html">예시</a>
+<a href="code-index(login).html">로그인</a>
+
+<h1>로그인</h1>
+
+<head>
+	<title>Login Box</title>
+	<style>
+		body{
+    background-image : url("login coding body.jpg");
+    }
+		.login {
+			width: 300px;
+			padding: 20px;
+			margin: 100px auto;
+			background-color: #f0f0f0;
+			border: 1px solid #ccc;
+			text-align: center;
+		}
+
+		.correct-password {
+			background-color: #90EE90;
+		}
+
+		.incorrect-password {
+			background-color: #FF6347;
+		}
+	</style>
+</head>
+<body>
+	<div class="login">
+		<h1>Login</h1>
+		<label for="password">Password:</label>
+		<input type="password" id="password">
+		<br>
+		<button onclick="checkPassword()">Submit</button>
+	</div>
+
+	<script>
+	function checkPassword() {
+			var password = document.getElementById("password").value;
+
+			if (password === "home") {
+				document.querySelector(".login").classList.add("correct-password");
+				document.querySelector(".login").classList.remove("incorrect-password");
+				setSessionCookie("page1"); // set session cookie for page1
+				window.location.href = "Home.html"; // redirect to page1
+			} else if (password === "code") {
+				document.querySelector(".login").classList.add("correct-password");
+				document.querySelector(".login").classList.remove("incorrect-password");
+				setSessionCookie("page2"); // set session cookie for page2
+				window.location.href = "code-home.html"; // redirect to page2
+			} else {
+				document.querySelector(".login").classList.add("incorrect-password");
+				document.querySelector(".login").classList.remove("correct-password");
+			}
+		}
+		function setSessionCookie() {
+			var now = new Date();
+			var time = now.getTime();
+			var expireTime = time + (5 * 60 * 1000); // expire in 5 minutes
+			now.setTime(expireTime);
+			document.cookie = "sessionID=12345;expires=" + now.toUTCString() + ";path=/";
+		}
+		var input = document.getElementById("password");
+		// Enable login with enter key
+		input.addEventListener("keyup", function(event) {
+			if (event.key === "Enter") {
+				event.preventDefault();
+				checkPassword();
+			}
+		});
+	</script>
+
+</body>
+
+<script>
+    function logout() {
+        document.cookie = "sessionID=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        window.location.href = "index.html";
+    }
+</script>
+
+</html>
