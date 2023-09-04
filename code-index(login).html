@@ -47,12 +47,12 @@
 	function checkPassword() {
 			var password = document.getElementById("password").value;
 
-			if (password === "home") {
+			if (password == lower("home")) {
 				document.querySelector(".login").classList.add("correct-password");
 				document.querySelector(".login").classList.remove("incorrect-password");
 				setSessionCookie("page1"); // set session cookie for page1
 				window.location.href = "Home.html"; // redirect to page1
-			} else if (password === "code") {
+			} else if (password == lower("code")) {
 				document.querySelector(".login").classList.add("correct-password");
 				document.querySelector(".login").classList.remove("incorrect-password");
 				setSessionCookie("page2"); // set session cookie for page2
